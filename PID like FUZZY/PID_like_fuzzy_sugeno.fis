@@ -1,0 +1,49 @@
+[System]
+Name='PID_like_fuzzy_sugeno'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=5
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='error'
+Range=[0 37.65]
+NumMFs=5
+MF1='mf1':'trimf',[-9.412 0 9.412]
+MF2='mf2':'trimf',[0 9.412 18.82]
+MF3='mf3':'trimf',[9.412 18.82 28.24]
+MF4='mf4':'trimf',[18.82 28.24 37.65]
+MF5='mf5':'trimf',[28.24 37.65 47.06]
+
+[Input2]
+Name='change_of_error'
+Range=[0 37.65]
+NumMFs=5
+MF1='mf1':'trimf',[-9.412 0 9.412]
+MF2='mf2':'trimf',[0 9.412 18.82]
+MF3='mf3':'trimf',[9.412 18.82 28.24]
+MF4='mf4':'trimf',[18.82 28.24 37.65]
+MF5='mf5':'trimf',[28.24 37.65 47.06]
+
+[Output1]
+Name='actual_temp'
+Range=[-1 30]
+NumMFs=5
+MF1='mf1':'constant',[-0.8541]
+MF2='mf2':'constant',[2.355]
+MF3='mf3':'constant',[15]
+MF4='mf4':'constant',[30.75]
+MF5='mf5':'constant',[37]
+
+[Rules]
+1 1, 1 (1) : 1
+2 2, 1 (1) : 1
+3 3, 1 (1) : 1
+4 4, 4 (1) : 1
+5 5, 5 (1) : 1
