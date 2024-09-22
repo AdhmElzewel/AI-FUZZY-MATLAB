@@ -1,5 +1,6 @@
 # AI-FUZZY-MATLAB
 Artificial Intelligence Project of **Thermal system**
+![image](https://github.com/user-attachments/assets/7564d20c-f903-437e-a4c6-ad92aac1d123)
 
 ## Project description:
 - Thermal systems have served the humanity 
